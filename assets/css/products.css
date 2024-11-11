@@ -1,0 +1,168 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: Arial, sans-serif;
+  background-color: rgba(88, 88, 88, 0.502);
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+img {
+  height: 200px;
+  margin-inline: auto;
+}
+
+li {
+  list-style: none;
+}
+
+.header {
+  padding: 20px;
+}
+
+h1 {
+  color: rgb(74, 74, 74);
+  font-size: 70px;
+  text-align: center;
+  text-shadow: 3px 3px #000000;
+  font-weight: bolder;
+}
+
+.productCards {
+  /* display: grid;
+  grid-template-columns: repeat(4 , 1fr); */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 0px;
+  padding-inline: 20px;
+}
+
+.card {
+  background-color: rgba(236, 236, 236, 0.816);
+  padding: 20px;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-inline: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.formInput {
+  padding-inline: 20px;
+}
+
+input {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  margin-inline: auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid rgb(122, 122, 122);
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+}
+
+.tags {
+  display: flex;
+    padding-left: 0px;
+    gap: 10px;
+}
+
+.tags li {
+  background-color: aliceblue;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+.productTitle {
+  font-size: x-large;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.productDescription {
+  font-size: small;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.productPrice {
+  color: red;
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.card div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 50px;
+}
+
+@media (width >= 768px) {
+  .productCards {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+  }
+}
+
+@media (width >= 1110px) {
+  .productCards {
+    grid-template-columns: repeat(4 , 1fr);
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+}
